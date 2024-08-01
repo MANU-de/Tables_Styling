@@ -1,0 +1,70 @@
+table {
+  display: table;
+  border-spacing: 2px;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: 0;
+  text-align: left;
+  border-collapse: collapse;
+  --color: #d0d0f5;
+  caption-side: bottom;
+  /*full width*/
+  width: max(65rem, 100%);
+  table-layout: fixed;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+/* This won’t work yet */
+tr {
+	border-bottom: 1px solid;
+}
+
+th,
+td {
+	border: 1px solid;
+}
+
+th,
+caption {
+	text-align: start;
+}
+
+thead th:not(:first-child),
+td {
+	text-align: end;
+}
+
+thead {
+	border-block-end: 2px solid;
+	background: whitesmoke;
+    background: var(--color);
+}
+
+tfoot {
+	border-block: 2px solid;
+	background: whitesmoke;
+    background: var(--color);
+}
+
+th,
+td {
+	border: 1px solid lightgrey;
+	padding: 0.25rem 0.75rem;
+    vertical-align: baseline;
+}
+
+tbody tr:nth-child(even) {
+	background: color-mix(in srgb, var(--color), transparent 60%);
+}
+
+thead th {
+	vertical-align: bottom;
+}
+
+th:first-of-type {
+	width: 10rem;
+}
